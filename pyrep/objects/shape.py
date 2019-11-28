@@ -174,6 +174,16 @@ class Shape(Object):
         vrep.simSetShapeColor(
             self._handle, None, vrep.sim_colorcomponent_ambient_diffuse, color)
 
+    def set_transparency(self, transparancy: List[float]) -> None:
+        """Sets the transparency of the shape.
+
+        :param transparency: The value of the transparency.
+        :return:
+        """
+
+        vrep.simSetShapeColor(
+            self._handle, None, vrep.sim_colorcomponent_transparency, transparancy)
+
     def get_mass(self) -> float:
         """Gets the mass of the shape.
 
