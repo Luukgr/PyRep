@@ -145,11 +145,11 @@ class HolonomicBase(MobileBase):
         handleBase = self.get_handle()
         handle_inter_target_base = self.intermediate_target_base.get_handle()
         pos_v = self.target_base.get_position(relative_to=self)
-        or_v = self.target_base.get_orientation(relative_to=self)
+        or_v = self.target_base.get_orientation_back(relative_to=self)
 
         pos_inter = self.intermediate_target_base.get_position(
             relative_to=self)
-        or_inter = self.intermediate_target_base.get_orientation(
+        or_inter = self.intermediate_target_base.get_orientation_back(
             relative_to=self)
 
         if (sqrt((pos_v[0]) ** 2 + (
